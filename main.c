@@ -22,7 +22,7 @@ int main(void)
 	u8 APP_u8KeypadButtonValue = 0;
 	
 	/*initialize Keypad at PORTB*/
-	HKPD_u8InitializeKeypad();
+	HKPD_voidInitializeKeypad();
 	/*initialize LCD*/
 	HLCD_voidInitializeLCD();
 	
@@ -34,7 +34,7 @@ int main(void)
 	while (1) 
     {
 		/*read pressed key*/
-		APP_u8KeypadButtonValue = HKPD_GetPressedKey();
+		APP_u8KeypadButtonValue = HKPD_u8GetPressedKey();
 		/*display pressed keys*/
 		HLCD_voidSelectLine(HLCD_LINE2); 
 		HLCD_voidDisplayChar(APP_u8KeypadButtonValue);
